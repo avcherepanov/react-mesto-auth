@@ -5,7 +5,6 @@ import btnUser from '../images/edit-button.svg';
 import btnCard from '../images/add-button.svg';
 import { CurrentUserContext } from '../contexts/CurrentUserContext';
 
-
 function Main(props) {
     const currentUser = React.useContext(CurrentUserContext);
 
@@ -48,8 +47,6 @@ function Main(props) {
             </section>
         </main>
     );
-
-
 }
 
 export default Main;

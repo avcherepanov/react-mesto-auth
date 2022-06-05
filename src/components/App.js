@@ -60,10 +60,16 @@ function App() {
     const jwt = localStorage.getItem('jwt');
     if (jwt) {
       Auth.checkToken(jwt)
-        .then(() => {
-          handleLogin();
-          history.push('/');
-        });
+      .then((res) => {
+        if(res) {
+          setEmail(res.data.email)
+        };
+        handleLogin();
+        history.push('/');
+      })
+      .catch((err) => {
+      console.log(err);
+      });
     }
   }
 

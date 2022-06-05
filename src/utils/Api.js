@@ -105,8 +105,6 @@ class Api {
 
     }
 
-
-
     setAvatar(url) {
         return fetch(`${this._baseUrl}/users/me/avatar`, {
             method: 'PATCH',

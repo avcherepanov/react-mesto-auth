@@ -7,14 +7,11 @@ export default function SafetyIssuePopup({ isOpen, onClose,onSafetyIssue }){
      onSafetyIssue();
   }
   
-
   return(
     <div
     className={`popup  ${isOpen && "popup_opened"} popup_type_safety-issue`}
     name="popupSafetyIssue"
-
- 
-  >
+    >
     <div className="popup__container">
       <button type="reset"
        className="popup__close"
