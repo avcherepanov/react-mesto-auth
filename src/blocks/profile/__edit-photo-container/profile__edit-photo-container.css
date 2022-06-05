@@ -1,0 +1,15 @@
+.profile__edit-photo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: rgba(0,0,0,.8);
+    opacity: 0;
+    cursor: pointer;
+}
+
+.profile__edit-photo-container:hover {
+    opacity: 1;
+}

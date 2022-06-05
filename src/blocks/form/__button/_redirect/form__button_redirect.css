@@ -1,0 +1,22 @@
+.form__button_redirect{
+  margin: 15px auto 80px;
+  height: 17px;
+  font-size: 14px;
+  line-height: 1.21;
+
+}
+
+
+.form__button_redirect:hover {
+  opacity: 0.8;
+  transition: opacity .3s linear;
+}
+
+/* @media screen and (max-width: 501px) {
+  .form__button_redirect {
+    width: 238px;
+    height: 46px;
+    margin-bottom: 14px;
+    font-size: 14px;
+    line-height: 1.21;
+  } */
