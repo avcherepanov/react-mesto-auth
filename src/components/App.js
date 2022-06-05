@@ -34,15 +34,22 @@ function App() {
 
   function register(password, email) {
     Auth.register(password, email)
-      .then(() => {
-        setInfoToolTip({
-          src: success,
-          text: 'Вы успешно зарегистрировались!'
-        });
+      .then((res) => {
         handleInfoTooltip(true);
-        history.push('/sign-in');
+        if(res) {
+          setInfoToolTip({
+            src: success,
+            text: 'Вы успешно зарегистрировались!'
+          });
+          history.push('/sign-in');
+        }
       })
-      .catch(err => console.log(err));
+      .catch(() => {
+        setInfoToolTip({
+          src: unSuccess,
+          text: 'Что-то пошло не так! Попробуйте ещё раз.'});
+        handleInfoTooltip(true);
+      });
   }
 
   function closeInfoTooltip() {
